@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chinese Herbal Cleansing Ritual | 东方草本洁肤仪式</title>
+    <meta
+      name="description"
+      content="A Shopify-ready storefront prototype for Eastern herbal postpartum hair, body, and ritual care."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shipping-strip">
+        <span data-i18n="shippingOne">美国本地发货</span>
+        <span data-i18n="shippingTwo">无额外进口费用</span>
+        <span data-i18n="shippingThree">未来可接入 Shopify 商品目录</span>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Chinese Herbal Cleansing Ritual home">
+          <span class="brand-mark">中</span>
+          <span data-i18n="brand">Chinese Herbal Cleansing Ritual</span>
+        </a>
+        <div class="nav-links">
+          <a href="#shop" data-i18n="navShop">产品</a>
+          <a href="#ritual" data-i18n="navRitual">仪式</a>
+          <a href="#ingredients" data-i18n="navHerbs">草本</a>
+          <a href="#process" data-i18n="navProcess">工艺</a>
+          <a href="#story" data-i18n="navStory">故事</a>
+        </div>
+        <div class="nav-actions">
+          <button class="language-button" type="button" id="languageToggle" aria-label="Switch language">
+            <span>文</span>
+            <strong>EN</strong>
+          </button>
+          <button class="icon-button" type="button" aria-label="Search">
+            <span aria-hidden="true"></span>
+          </button>
+          <button class="bag-button" type="button"><span data-i18n="cart">购物袋</span> <span>0</span></button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="mountain-layer layer-one"></div>
+          <div class="mountain-layer layer-two"></div>
+          <div class="hero-product">
+            <span class="seal" data-i18n="heroSeal">东方草本仪式</span>
+            <span class="soap soap-green"></span>
+            <span class="soap soap-clay"></span>
+            <span class="bottle"></span>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">给现代妈妈的东方草本护理</p>
+          <h1 id="hero-title" data-i18n="heroTitle">把产后护理，变成安静而美的日常仪式。</h1>
+          <p data-i18n="heroBody">
+            A starter storefront for hair care, warming herbal patches, and hand-poured botanical
+            soaps. Built around cultural storytelling, ingredient education, and calm trust.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#shop" data-i18n="heroPrimary">查看产品矩阵</a>
+            <a class="text-link" href="#ingredients" data-i18n="heroSecondary">了解草本成分</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-grid" aria-label="Brand positioning">
+        <div>
+          <p class="eyebrow" data-i18n="introEyebrow">品牌方向</p>
+          <h2 data-i18n="introTitle">讲东方草本的美感，不做过度医疗承诺。</h2>
+        </div>
+        <p data-i18n="introBody">
+          The language focuses on ritual, comfort, scalp balance, warmth, and daily care. Product
+          claims are written in a Shopify-friendly way so they can later be refined for advertising
+          and compliance.
+        </p>
+      </section>
+
+      <section class="section" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="matrixEyebrow">产品矩阵</p>
+            <h2 id="shop-title" data-i18n="matrixTitle">先用占位产品搭出结构，后续再替换真实商品。</h2>
+          </div>
+          <a class="text-link" href="#featured" data-i18n="featuredLink">主推单品</a>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="featured-product" id="featured" aria-labelledby="featured-title">
+        <div class="featured-media">
+          <div class="product-stage">
+            <span class="stage-label" data-i18n="stageLabel">未来主推 SKU</span>
+            <span class="mock-pack pack-box">HERBAL<br />RITUAL</span>
+            <span class="mock-pack pack-round"></span>
+            <span class="mock-branch"></span>
+          </div>
+        </div>
+        <div class="featured-copy">
+          <p class="eyebrow" data-i18n="singleEyebrow">单品页面方向</p>
+          <h2 id="featured-title" data-i18n="singleTitle">人参山茶产后洗护仪式套装</h2>
+          <p data-i18n="singleBody">
+            A sample product page block for a future shampoo bar or wash set. The story leads with
+            origin, texture, and usage instead of promising a medical result.
+          </p>
+          <div class="price-row">
+            <span>$38.00</span>
+            <small data-i18n="placeholderPrice">占位价格</small>
+          </div>
+          <button class="primary-button" type="button" data-i18n="notify">到货提醒</button>
+          <ul class="feature-list">
+            <li data-i18n="singlePointOne">为产后洗发日设计的温和头皮清洁仪式</li>
+            <li data-i18n="singlePointTwo">山茶油灵感来自东方护发光泽传统</li>
+            <li data-i18n="singlePointThree">适合未来做套装、替换装与旅行盒组合</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section ritual-band" id="ritual" aria-labelledby="ritual-title">
+        <div>
+          <p class="eyebrow" data-i18n="ritualEyebrow">文化仪式感</p>
+          <h2 id="ritual-title" data-i18n="ritualTitle">不只是产品，而是一套护理动作。</h2>
+          <p data-i18n="ritualBody">
+            The storefront frames each item as a small care ritual: warm, rinse, breathe, wrap, rest.
+            This creates a stronger premium feeling than simply listing ingredients.
+          </p>
+        </div>
+        <div class="ritual-steps">
+          <article>
+            <span>01</span>
+            <h3 data-i18n="stepOneTitle">准备</h3>
+            <p data-i18n="stepOneBody">温水、软毛巾、安静光线，以及一个干净的护理台面。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3 data-i18n="stepTwoTitle">使用</h3>
+            <p data-i18n="stepTwoBody">用缓慢、可重复的动作按摩、按压或揉出泡沫。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3 data-i18n="stepThreeTitle">休息</h3>
+            <p data-i18n="stepThreeBody">让香气、温感和触感成为恢复时间的一部分。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="ingredients" aria-labelledby="ingredients-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="ingredientsEyebrow">草本成分功效图</p>
+            <h2 id="ingredients-title" data-i18n="ingredientsTitle">用高端美妆的方式讲清中草药成分。</h2>
+          </div>
+          <p class="heading-note" data-i18n="ingredientsNote">确认最终配方后，可加入中英文对照成分说明。</p>
+        </div>
+        <div class="ingredient-grid">
+          <article class="ingredient-card">
+            <span class="ingredient-visual ginseng"></span>
+            <h3 data-i18n="ginsengTitle">人参 Ginseng</h3>
+            <p data-i18n="ginsengBody">帮助塑造清爽头皮感，也让产品拥有更扎实的东方草本故事。</p>
+          </article>
+          <article class="ingredient-card">
+            <span class="ingredient-visual camellia"></span>
+            <h3 data-i18n="camelliaTitle">山茶油 Camellia Oil</h3>
+            <p data-i18n="camelliaBody">带来顺滑、光泽与柔软触感，让头发更容易打理。</p>
+          </article>
+          <article class="ingredient-card">
+            <span class="ingredient-visual mugwort"></span>
+            <h3 data-i18n="mugwortTitle">艾草 Mugwort</h3>
+            <p data-i18n="mugwortBody">把暖宫贴、肚脐贴品类与熟悉的东方温养习惯连接起来。</p>
+          </article>
+          <article class="ingredient-card">
+            <span class="ingredient-visual angelica"></span>
+            <h3 data-i18n="angelicaTitle">当归 Angelica Root</h3>
+            <p data-i18n="angelicaBody">为产后身体护理系列增加柔和、修护感的草本气质。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="process-copy">
+          <p class="eyebrow" data-i18n="processEyebrow">制作过程呈现</p>
+          <h2 id="process-title" data-i18n="processTitle">用慢工艺建立顾客信任。</h2>
+          <p data-i18n="processBody">
+            Use this section for real workshop photos later: herb sorting, oil infusion, soap curing,
+            patch packing, and quality checks.
+          </p>
+        </div>
+        <div class="process-timeline">
+          <article>
+            <span></span>
+            <h3 data-i18n="processOneTitle">草本筛选</h3>
+            <p data-i18n="processOneBody">根据气味、传统认知与配方适配度选择原料。</p>
+          </article>
+          <article>
+            <span></span>
+            <h3 data-i18n="processTwoTitle">小批量制作</h3>
+            <p data-i18n="processTwoBody">皂体与贴敷产品按批次制作，便于稳定品质。</p>
+          </article>
+          <article>
+            <span></span>
+            <h3 data-i18n="processThreeTitle">静置与包装</h3>
+            <p data-i18n="processThreeBody">产品经过静置、熟成或整理后，再带着批次信息包装。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="founder" id="story" aria-labelledby="story-title">
+        <div class="founder-portrait" aria-hidden="true">
+          <span></span>
+        </div>
+        <div>
+          <p class="eyebrow" data-i18n="founderEyebrow">主理人故事</p>
+          <h2 id="story-title" data-i18n="founderTitle">为海外高知华人妈妈打造的东方草本护理。</h2>
+          <p data-i18n="founderBody">
+            The founder voice can blend English trust signals with Chinese cultural memory: gentle
+            postpartum routines, herbal knowledge from family, and modern beauty standards.
+          </p>
+          <blockquote data-i18n="founderQuote">“我希望每一件产品，都像一张来自家里的护理便签，被翻译成我们当下生活也能使用的方式。”</blockquote>
+        </div>
+      </section>
+
+      <section class="section detail-grid" aria-label="Store details">
+        <article>
+          <h3 data-i18n="detailOneTitle">信任细节</h3>
+          <p data-i18n="detailOneBody">预留评价、发货标识、批次编号和成分透明说明的位置。</p>
+        </article>
+        <article>
+          <h3 data-i18n="detailTwoTitle">未来 Shopify 结构</h3>
+          <p data-i18n="detailTwoBody">页面中的每个模块都可以变成 Shopify section：首屏、集合网格、产品故事、成分、工艺和评价。
+          </p>
+        </article>
+        <article>
+          <h3 data-i18n="detailThreeTitle">内容栏目</h3>
+          <p data-i18n="detailThreeBody">后续 Blog 可以写产后洗头护理、草本沐浴文化、手工皂保存方式等主题。
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark">中</span>
+          <span data-i18n="brand">Chinese Herbal Cleansing Ritual</span>
+        </a>
+        <p data-i18n="footerNote">东方草本护理独立站原型。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#shop" data-i18n="footerProducts">产品</a>
+        <a href="#ingredients" data-i18n="footerIngredients">成分</a>
+        <a href="#process" data-i18n="footerProcess">工艺</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
