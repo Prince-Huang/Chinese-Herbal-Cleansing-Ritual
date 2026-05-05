@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Postpartum Survey | Chinese Herbal Cleansing Ritual</title>
+    <meta
+      name="description"
+      content="A one-question-at-a-time postpartum body tendency survey for Chinese Herbal Cleansing Ritual."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="survey-page">
+    <header class="site-header">
+      <nav class="nav" aria-label="Survey navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">中</span>
+          <span>Chinese Herbal Cleansing Ritual</span>
+        </a>
+        <div class="nav-actions">
+          <button class="language-button" type="button" id="surveyLanguageToggle" aria-label="Switch language">
+            <span>文</span>
+            <strong>EN</strong>
+          </button>
+          <a class="bag-button survey-home-link" href="index.html" data-i18n="backHome">返回主页</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="survey-shell">
+      <section class="survey-card-page" aria-labelledby="survey-title">
+        <div class="survey-card-head">
+          <p class="eyebrow" data-i18n="eyebrow">Postpartum Constitution Survey</p>
+          <h1 id="survey-title" data-i18n="title">测测你的产后恢复类型</h1>
+          <p data-i18n="intro">
+            每次只回答一个问题。完成后，我们会根据你的回答倾向给出中性、寒性或热性建议。
+          </p>
+          <p class="survey-note" data-i18n="disclaimer">
+            本测验基于中医理论提供通用调理建议，不构成医疗诊断。如有严重不适，请立即咨询医生或助产士。
+          </p>
+        </div>
+
+        <div class="survey-progress" aria-hidden="true">
+          <span id="surveyProgressBar"></span>
+        </div>
+
+        <form id="stepSurveyForm" class="step-survey-form">
+          <div id="stepQuestion"></div>
+          <div class="survey-actions">
+            <button class="text-button" type="button" id="prevQuestion" data-i18n="previous">上一题</button>
+            <button class="primary-button" type="button" id="nextQuestion" data-i18n="next">下一题</button>
+          </div>
+        </form>
+
+        <div class="survey-result" id="stepSurveyResult" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="survey.js"></script>
+  </body>
+</html>

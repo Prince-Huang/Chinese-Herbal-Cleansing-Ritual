@@ -9,7 +9,10 @@ const translations = {
     navRitual: "仪式",
     navHerbs: "草本",
     navProcess: "工艺",
-    navStory: "故事",
+    navStory: "关于我们",
+    navSurvey: "问卷",
+    backHome: "返回主页",
+    aboutHeaderSlogan: "我们不是复制古老规矩，而是翻译古老知识",
     cart: "购物袋",
     heroSeal: "东方草本产后调理",
     heroEyebrow: "Gentle herbal rituals rooted in ancient wisdom.",
@@ -19,7 +22,7 @@ const translations = {
     heroPrimary: "开启你的产后调理",
     heroSecondary: "测测产后体质",
     introEyebrow: "品牌核心",
-    introTitle: "Honoring an ancient tradition. Designed for every mother.",
+    introTitle: "致敬古老传统，也为每一位妈妈重新设计。",
     introBody:
       "我们把5000年中医产后智慧、草本传统、体质分型和四阶段恢复节奏，转译成现代生活里更容易使用的外用护理仪式。",
     welcomeEyebrow: "Our Story",
@@ -42,6 +45,21 @@ const translations = {
     quizCardTitle: "中性 / 寒性 / 热性体质倾向",
     quizCardBody: "目前这里是测试入口占位。未来可以做成 Shopify 互动问答，并在结果页推荐套组。",
     quizCta: "查看恢复时间线",
+    surveyIconLabel: "打开产后体质测试",
+    surveyDisclaimer: "本测验基于中医理论提供通用调理建议，不构成医疗诊断。如有严重不适，请立即咨询医生或助产士。",
+    surveySubmit: "查看我的结果",
+    surveyReset: "重新填写",
+    surveyMissing: "请先完成所有问题，再查看结果。",
+    surveyScoreLabel: "你的回答倾向",
+    resultNeutralTitle: "中性体质倾向：温和平衡",
+    resultNeutralBody: "你更接近大多数人的中性体质，产后恢复主打“温和平衡”。建议从标准28天产后焕新套组开始，配合泡脚、轻柔贴敷和日常洗护。",
+    resultNeutralProducts: "推荐：标准版28天产后焕新套组、舒眠足浴包、中草药手工皂。",
+    resultColdTitle: "寒性体质倾向：更需要温热支持",
+    resultColdBody: "你的回答显示怕冷、手脚凉或偏寒信号更明显。产后护理可更重视腹部与下半身的温暖，但仍建议从第15天后温和开始。",
+    resultColdProducts: "推荐：温护升级版、温护暖宫贴、温护足浴包。",
+    resultHeatTitle: "热性体质倾向：减少过度温热",
+    resultHeatBody: "你的回答显示偏热、烦躁或口渴等信号更明显。建议减少温热性产品的使用，把重点放在温和清洁、肚脐贴与教育内容上。",
+    resultHeatProducts: "推荐：精简版护理组合、草本肚脐贴、中草药手工皂。",
     benefitsEyebrow: "按需求购买",
     benefitsTitle: "用真实恢复需求来组织产品分类。",
     benefitsNote: "对应睡眠、腹部舒适、脱发、怕冷和日常疲惫。",
@@ -141,7 +159,10 @@ const translations = {
     navRitual: "Ritual",
     navHerbs: "Herbs",
     navProcess: "Process",
-    navStory: "Story",
+    navStory: "About Us",
+    navSurvey: "Survey",
+    backHome: "Back to homepage",
+    aboutHeaderSlogan: "We do not copy ancient rules. We translate ancient knowledge.",
     cart: "Cart",
     heroSeal: "Eastern postpartum care",
     heroEyebrow: "Gentle herbal rituals rooted in ancient wisdom.",
@@ -175,6 +196,21 @@ const translations = {
     quizCardTitle: "Neutral / Cold / Heat body tendency",
     quizCardBody: "For now this is a CTA placeholder. Later it can become an interactive Shopify quiz with product recommendations.",
     quizCta: "View recovery timeline",
+    surveyIconLabel: "Open postpartum survey",
+    surveyDisclaimer: "This quiz offers general wellness guidance based on traditional Chinese principles. It is not a medical diagnosis. If you feel seriously unwell, please consult your doctor or midwife.",
+    surveySubmit: "See my result",
+    surveyReset: "Reset",
+    surveyMissing: "Please answer every question before viewing your result.",
+    surveyScoreLabel: "Your answer pattern",
+    resultNeutralTitle: "Neutral tendency: gentle balance",
+    resultNeutralBody: "Your answers are closest to a neutral tendency. Your postpartum care can focus on gentle balance, simple routines, and steady daily support.",
+    resultNeutralProducts: "Recommended: Standard 28-Day Postpartum Renewal Set, Sleep Ease Foot Soak, Chinese Herbal Soap Set.",
+    resultColdTitle: "Cold tendency: more warming support",
+    resultColdBody: "Your answers show more cold signs, such as chilliness or cold hands and feet. You may prefer rituals that focus on lower-body and belly warmth, starting gently from day 15 onward.",
+    resultColdProducts: "Recommended: Warming Upgrade Set, Warming Belly Patch, Warming Foot Soak.",
+    resultHeatTitle: "Heat tendency: reduce excess warmth",
+    resultHeatBody: "Your answers show more heat signs, such as thirst, restlessness, or feeling warm. You may prefer a simplified routine with less warming intensity.",
+    resultHeatProducts: "Recommended: Simplified Care Set, Herbal Navel Patch, Chinese Herbal Soap Set.",
     benefitsEyebrow: "Shop by benefit",
     benefitsTitle: "Organize the store by real recovery needs.",
     benefitsNote: "Sleep, digestion, hair shedding, warmth, and daily fatigue from the brand brief.",
@@ -276,6 +312,63 @@ const products = [
   { title: { zh: "中草药手工皂系列", en: "Chinese Herbal Soap Set" }, category: { zh: "日常疲惫", en: "Daily fatigue" }, price: "$24.00", compareAt: "$30.00", reviews: { zh: "12 条评价", en: "12 reviews" }, badge: { zh: "手工皂", en: "Soap" }, shapes: ["disc"] },
 ];
 
+const surveyQuestionsData = [
+  {
+    zh: "怕冷还是怕热？",
+    en: "Do you feel colder or warmer lately?",
+    answers: [
+      { type: "cold", zh: "非常怕冷，手脚冰凉", en: "Very cold, with cold hands and feet" },
+      { type: "heat", zh: "非常怕热，总想喝凉的", en: "Very warm, often craving cold drinks" },
+      { type: "neutral", zh: "都还好，或者偶尔", en: "Mostly balanced, or only occasional" },
+    ],
+  },
+  {
+    zh: "手脚温度？",
+    en: "How do your hands and feet usually feel?",
+    answers: [
+      { type: "cold", zh: "常年冰凉", en: "Usually cold" },
+      { type: "heat", zh: "常年温热", en: "Usually warm" },
+      { type: "neutral", zh: "和正常人差不多", en: "About normal" },
+    ],
+  },
+  {
+    zh: "恶露情况？",
+    en: "How would you describe lochia right now?",
+    answers: [
+      { type: "cold", zh: "量少、颜色暗、血块多", en: "Light amount, darker color, more clots" },
+      { type: "heat", zh: "量多、颜色鲜红、味重", en: "Heavier amount, bright red color, stronger odor" },
+      { type: "neutral", zh: "正常排净", en: "Clearing normally" },
+    ],
+  },
+  {
+    zh: "口渴与饮水偏好？",
+    en: "Thirst and drink preference?",
+    answers: [
+      { type: "cold", zh: "不渴，喜欢喝热水", en: "Not very thirsty, prefer warm water" },
+      { type: "heat", zh: "经常口渴，喜欢喝凉水", en: "Often thirsty, prefer cold water" },
+      { type: "neutral", zh: "正常，温水和凉水都可以", en: "Normal; warm or cool water both feel fine" },
+    ],
+  },
+  {
+    zh: "产后排便感觉？",
+    en: "How does bowel movement feel postpartum?",
+    answers: [
+      { type: "heat", zh: "困难，不规律", en: "Difficult or irregular" },
+      { type: "neutral", zh: "基本正常", en: "Mostly normal" },
+      { type: "cold", zh: "大便偏软/不成形", en: "Loose or unformed" },
+    ],
+  },
+  {
+    zh: "睡眠质量？",
+    en: "How is your sleep quality?",
+    answers: [
+      { type: "heat", zh: "很差，很难入睡", en: "Poor; hard to fall asleep" },
+      { type: "neutral", zh: "一般，能睡但易醒", en: "Average; can sleep but wake easily" },
+      { type: "neutral", zh: "较好，基本能休息", en: "Fairly good; able to rest" },
+    ],
+  },
+];
+
 const philosophy = [
   { zh: ["时机，本身就是智慧", "中医产后调理遵循朴素的节奏：前十四天，以休息为主。第十五天起，温和介入。"], en: ["Timing is wisdom", "Traditional Chinese postpartum care honors a simple truth: the body needs time. First 14 days: rest. Day 15 onward: gentle support begins."] },
   { zh: ["草本知识，用心转译", "艾草、生姜、当归已经温暖了新妈妈上千年。我们把它们做成贴敷、泡脚、头皮按摩油等更适合现代生活的形态。"], en: ["Herbal knowledge, translated with care", "Mugwort, ginger, and angelica have warmed new mothers for centuries. We present them as patches, foot soaks, and scalp oils."] },
@@ -328,13 +421,18 @@ const blogGrid = document.querySelector("#blogGrid");
 const philosophyGrid = document.querySelector("#philosophyGrid");
 const principleList = document.querySelector("#principleList");
 const promiseGrid = document.querySelector("#promiseGrid");
+const surveyForm = document.querySelector("#surveyForm");
+const surveyQuestions = document.querySelector("#surveyQuestions");
+const surveyResult = document.querySelector("#surveyResult");
+const surveyReset = document.querySelector("#surveyReset");
 const languageToggle = document.querySelector("#languageToggle");
-let currentLanguage = "zh";
+let currentLanguage = localStorage.getItem("preferredLanguage") === "en" ? "en" : "zh";
 
 const renderShape = (shape) => `<span class="${shape}" aria-hidden="true"></span>`;
 const card = (item) => `<article><h3>${item[currentLanguage][0]}</h3><p>${item[currentLanguage][1]}</p></article>`;
 
 const renderProducts = () => {
+  if (!grid) return;
   grid.innerHTML = products
     .map(
       (product) => `
@@ -356,41 +454,107 @@ const renderProducts = () => {
 };
 
 const renderBenefits = () => {
+  if (!benefitGrid) return;
   benefitGrid.innerHTML = benefits
     .map((item, index) => `<article class="benefit-card"><span>${String(index + 1).padStart(2, "0")}</span><h3>${item[currentLanguage][0]}</h3><p>${item[currentLanguage][1]}</p></article>`)
     .join("");
 };
 
 const renderTimeline = () => {
+  if (!timelineGrid) return;
   timelineGrid.innerHTML = timeline
     .map((item) => `<article><span>${item[currentLanguage][0]}</span><h3>${item[currentLanguage][1]}</h3><p>${item[currentLanguage][2]}</p></article>`)
     .join("");
 };
 
 const renderReviews = () => {
+  if (!reviewGrid) return;
   reviewGrid.innerHTML = reviews.map((item) => `<article><div class="rating">★★★★★</div><p>${item[currentLanguage]}</p></article>`).join("");
 };
 
 const renderBlogs = () => {
+  if (!blogGrid) return;
   blogGrid.innerHTML = blogs
     .map((item) => `<article><p class="eyebrow">${currentLanguage === "zh" ? "内容选题" : "Article idea"}</p><h3>${item[currentLanguage]}</h3></article>`)
     .join("");
 };
 
 const renderStaticCards = () => {
-  philosophyGrid.innerHTML = philosophy.map(card).join("");
-  promiseGrid.innerHTML = promises.map(card).join("");
-  principleList.innerHTML = principles
-    .map((item) => `<article><strong>${item[currentLanguage][0]}</strong><span>${item[currentLanguage][1]}</span></article>`)
+  if (philosophyGrid) philosophyGrid.innerHTML = philosophy.map(card).join("");
+  if (promiseGrid) promiseGrid.innerHTML = promises.map(card).join("");
+  if (principleList) {
+    principleList.innerHTML = principles
+      .map((item) => `<article><strong>${item[currentLanguage][0]}</strong><span>${item[currentLanguage][1]}</span></article>`)
+      .join("");
+  }
+};
+
+const renderSurvey = () => {
+  if (!surveyQuestions) return;
+  surveyQuestions.innerHTML = surveyQuestionsData
+    .map(
+      (question, questionIndex) => `
+        <fieldset class="question-card">
+          <legend>${questionIndex + 1}. ${question[currentLanguage]}</legend>
+          <div class="answer-list">
+            ${question.answers
+              .map(
+                (answer, answerIndex) => `
+                  <label>
+                    <input type="radio" name="q${questionIndex}" value="${answer.type}" data-answer-label="${answer[currentLanguage]}" />
+                    <span>${answer[currentLanguage]}</span>
+                  </label>
+                `,
+              )
+              .join("")}
+          </div>
+        </fieldset>
+      `,
+    )
     .join("");
+};
+
+const resultCopy = {
+  neutral: ["resultNeutralTitle", "resultNeutralBody", "resultNeutralProducts"],
+  cold: ["resultColdTitle", "resultColdBody", "resultColdProducts"],
+  heat: ["resultHeatTitle", "resultHeatBody", "resultHeatProducts"],
+};
+
+const getSurveyResultType = (scores) => {
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  if (sorted[0][1] === sorted[1][1]) return "neutral";
+  return sorted[0][0];
+};
+
+const renderSurveyResult = (type, scores) => {
+  if (!surveyResult) return;
+  const [titleKey, bodyKey, productsKey] = resultCopy[type];
+  surveyResult.classList.add("is-visible");
+  surveyResult.innerHTML = `
+    <p class="eyebrow">${translations[currentLanguage].surveyScoreLabel}</p>
+    <h3>${translations[currentLanguage][titleKey]}</h3>
+    <p>${translations[currentLanguage][bodyKey]}</p>
+    <p><strong>${translations[currentLanguage][productsKey]}</strong></p>
+    <div class="score-row">
+      <span>Neutral ${scores.neutral}</span>
+      <span>Cold ${scores.cold}</span>
+      <span>Heat ${scores.heat}</span>
+    </div>
+  `;
 };
 
 const applyLanguage = (language) => {
   currentLanguage = language;
+  localStorage.setItem("preferredLanguage", language);
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
     element.textContent = translations[language][key];
+  });
+  document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+    const key = element.dataset.i18nTitle;
+    element.setAttribute("title", translations[language][key]);
+    element.setAttribute("aria-label", translations[language][key]);
   });
   languageToggle.querySelector("strong").textContent = language === "zh" ? "EN" : "中文";
   languageToggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "切换到中文");
@@ -400,10 +564,42 @@ const applyLanguage = (language) => {
   renderReviews();
   renderBlogs();
   renderStaticCards();
+  renderSurvey();
+  if (surveyResult) {
+    surveyResult.classList.remove("is-visible");
+    surveyResult.innerHTML = "";
+  }
 };
 
 languageToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage === "zh" ? "en" : "zh");
 });
+
+if (surveyForm) {
+  surveyForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(surveyForm);
+    const scores = { neutral: 0, cold: 0, heat: 0 };
+    for (let index = 0; index < surveyQuestionsData.length; index += 1) {
+      const answerType = formData.get(`q${index}`);
+      if (!answerType) {
+        surveyResult.classList.add("is-visible");
+        surveyResult.innerHTML = `<p>${translations[currentLanguage].surveyMissing}</p>`;
+        return;
+      }
+      scores[answerType] += 1;
+    }
+
+    renderSurveyResult(getSurveyResultType(scores), scores);
+  });
+}
+
+if (surveyReset) {
+  surveyReset.addEventListener("click", () => {
+    surveyForm.reset();
+    surveyResult.classList.remove("is-visible");
+    surveyResult.innerHTML = "";
+  });
+}
 
 applyLanguage(currentLanguage);
