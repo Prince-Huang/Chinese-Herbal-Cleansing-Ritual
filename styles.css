@@ -65,6 +65,8 @@ button {
 .section,
 .quiz-panel,
 .disclaimer,
+.wisdom-section,
+.final-cta,
 .featured-product,
 .founder {
   width: min(1180px, calc(100% - 36px));
@@ -443,6 +445,7 @@ p {
 }
 
 .intro-grid,
+.story-welcome,
 .section-heading,
 .process,
 .founder,
@@ -464,13 +467,35 @@ p {
   justify-self: end;
 }
 
+.story-welcome {
+  border-top: 1px solid var(--line);
+}
+
+.story-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.story-copy p {
+  margin: 0;
+}
+
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
 }
 
+.promise-grid,
+.principle-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .benefit-card,
+.promise-grid article,
+.principle-list article,
 .timeline-grid article,
 .review-grid article,
 .blog-grid article {
@@ -487,6 +512,27 @@ p {
   color: var(--clay);
   font-size: 13px;
   font-weight: 820;
+}
+
+.promise-grid article {
+  min-height: 220px;
+}
+
+.principle-list article {
+  display: grid;
+  gap: 8px;
+}
+
+.principle-list strong {
+  color: var(--deep);
+  font-size: 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 640;
+}
+
+.principle-list span {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .product-grid {
@@ -876,6 +922,52 @@ blockquote {
   gap: 18px;
 }
 
+.wisdom-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 52px;
+  align-items: center;
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wisdom-pill {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  color: var(--deep);
+  background: #f8efe4;
+  border: 1px solid rgba(38, 69, 74, 0.14);
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.final-cta {
+  margin-top: 18px;
+  margin-bottom: 32px;
+  padding: 62px;
+  text-align: center;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 12% 24%, rgba(255, 255, 255, 0.64), transparent 18%),
+    linear-gradient(135deg, rgba(111, 139, 119, 0.28), rgba(234, 201, 185, 0.42));
+}
+
+.final-cta h2 {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.final-cta p:not(.eyebrow) {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.final-cta .primary-link {
+  margin-top: 18px;
+}
+
 .review-grid,
 .blog-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -949,6 +1041,8 @@ blockquote {
   .founder,
   .footer,
   .quiz-panel,
+  .wisdom-section,
+  .story-welcome,
   .ritual-band {
     grid-template-columns: 1fr;
   }
@@ -970,6 +1064,8 @@ blockquote {
   .ingredient-grid,
   .detail-grid,
   .benefit-grid,
+  .promise-grid,
+  .principle-list,
   .timeline-grid,
   .review-grid,
   .blog-grid {
@@ -1018,6 +1114,8 @@ blockquote {
   .ingredient-grid,
   .detail-grid,
   .benefit-grid,
+  .promise-grid,
+  .principle-list,
   .timeline-grid,
   .review-grid,
   .blog-grid {
@@ -1026,6 +1124,10 @@ blockquote {
 
   .quiz-panel {
     padding: 28px;
+  }
+
+  .final-cta {
+    padding: 34px 22px;
   }
 
   .featured-media,
