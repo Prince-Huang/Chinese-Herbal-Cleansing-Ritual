@@ -63,6 +63,8 @@ button {
 .nav,
 .footer,
 .section,
+.quiz-panel,
+.disclaimer,
 .featured-product,
 .founder {
   width: min(1180px, calc(100% - 36px));
@@ -392,6 +394,54 @@ p {
   padding: 88px 0;
 }
 
+.quiz-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: 38px;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 16px;
+  padding: 42px;
+  border: 1px solid rgba(38, 69, 74, 0.18);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(195, 154, 83, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(234, 201, 185, 0.28));
+}
+
+.quiz-panel h2 {
+  margin-bottom: 12px;
+}
+
+.quiz-card {
+  padding: 28px;
+  border-radius: var(--radius);
+  color: var(--white);
+  background: var(--deep);
+  box-shadow: var(--shadow);
+}
+
+.quiz-card span {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--deep);
+  background: #f5eadb;
+  font-size: 12px;
+  font-weight: 780;
+}
+
+.quiz-card p {
+  color: #d9e6df;
+}
+
+.quiz-card .primary-link {
+  border-color: #f8efe4;
+  color: var(--deep);
+  background: #f8efe4;
+}
+
 .intro-grid,
 .section-heading,
 .process,
@@ -412,6 +462,31 @@ p {
 .heading-note {
   max-width: 390px;
   justify-self: end;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.benefit-card,
+.timeline-grid article,
+.review-grid article,
+.blog-grid article {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.benefit-card span,
+.timeline-grid span {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--clay);
+  font-size: 13px;
+  font-weight: 820;
 }
 
 .product-grid {
@@ -793,6 +868,40 @@ blockquote {
   gap: 18px;
 }
 
+.timeline-grid,
+.review-grid,
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.review-grid,
+.blog-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.testimonials {
+  border-top: 1px solid var(--line);
+}
+
+.disclaimer {
+  margin-bottom: 58px;
+  padding: 24px 28px;
+  border: 1px solid rgba(38, 69, 74, 0.18);
+  border-radius: var(--radius);
+  background: #f8efe4;
+}
+
+.disclaimer p {
+  margin: 0;
+  font-size: 13px;
+}
+
 .footer {
   padding: 42px 0 56px;
   border-top: 1px solid var(--line);
@@ -839,6 +948,7 @@ blockquote {
   .process,
   .founder,
   .footer,
+  .quiz-panel,
   .ritual-band {
     grid-template-columns: 1fr;
   }
@@ -858,7 +968,11 @@ blockquote {
 
   .product-grid,
   .ingredient-grid,
-  .detail-grid {
+  .detail-grid,
+  .benefit-grid,
+  .timeline-grid,
+  .review-grid,
+  .blog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -902,8 +1016,16 @@ blockquote {
 
   .product-grid,
   .ingredient-grid,
-  .detail-grid {
+  .detail-grid,
+  .benefit-grid,
+  .timeline-grid,
+  .review-grid,
+  .blog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .quiz-panel {
+    padding: 28px;
   }
 
   .featured-media,

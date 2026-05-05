@@ -24,6 +24,7 @@
         </a>
         <div class="nav-links">
           <a href="#shop" data-i18n="navShop">产品</a>
+          <a href="#quiz" data-i18n="navQuiz">测试</a>
           <a href="#ritual" data-i18n="navRitual">仪式</a>
           <a href="#ingredients" data-i18n="navHerbs">草本</a>
           <a href="#process" data-i18n="navProcess">工艺</a>
@@ -63,7 +64,7 @@
           </p>
           <div class="hero-actions">
             <a class="primary-link" href="#shop" data-i18n="heroPrimary">查看产品矩阵</a>
-            <a class="text-link" href="#ingredients" data-i18n="heroSecondary">了解草本成分</a>
+            <a class="text-link" href="#quiz" data-i18n="heroSecondary">测测产后体质</a>
           </div>
         </div>
       </section>
@@ -80,6 +81,34 @@
         </p>
       </section>
 
+      <section class="quiz-panel" id="quiz" aria-labelledby="quiz-title">
+        <div>
+          <p class="eyebrow" data-i18n="quizEyebrow">Take the Quiz</p>
+          <h2 id="quiz-title" data-i18n="quizTitle">Discover your postpartum recovery style.</h2>
+          <p data-i18n="quizBody">
+            A gentle quiz based on cold, heat, sleep, lochia, thirst, and digestion signals. Future
+            results can recommend a neutral, warming, or simplified ritual set.
+          </p>
+        </div>
+        <div class="quiz-card">
+          <span data-i18n="quizBadge">6 questions</span>
+          <h3 data-i18n="quizCardTitle">Neutral / Cold / Heat body tendency</h3>
+          <p data-i18n="quizCardBody">For now this is a CTA placeholder. Later it can become an interactive Shopify quiz.</p>
+          <a class="primary-link" href="#timeline" data-i18n="quizCta">View recovery timeline</a>
+        </div>
+      </section>
+
+      <section class="section" id="benefits" aria-labelledby="benefits-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="benefitsEyebrow">Shop by benefit</p>
+            <h2 id="benefits-title" data-i18n="benefitsTitle">Organize the store by what mothers feel.</h2>
+          </div>
+          <p class="heading-note" data-i18n="benefitsNote">This matches the brief: sleep, digestion, hair shedding, warmth, and daily fatigue.</p>
+        </div>
+        <div class="benefit-grid" id="benefitGrid"></div>
+      </section>
+
       <section class="section" id="shop" aria-labelledby="shop-title">
         <div class="section-heading">
           <div>
@@ -90,6 +119,17 @@
         </div>
 
         <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="timelineEyebrow">Postpartum timeline</p>
+            <h2 id="timeline-title" data-i18n="timelineTitle">Products begin from day 15.</h2>
+          </div>
+          <p class="heading-note" data-i18n="timelineNote">The first 14 days are education-only, respecting the body's natural early recovery.</p>
+        </div>
+        <div class="timeline-grid" id="timelineGrid"></div>
       </section>
 
       <section class="featured-product" id="featured" aria-labelledby="featured-title">
@@ -224,6 +264,27 @@
         </div>
       </section>
 
+      <section class="section testimonials" aria-labelledby="reviews-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="reviewsEyebrow">Customer trust</p>
+            <h2 id="reviews-title" data-i18n="reviewsTitle">Bilingual reviews for two audiences.</h2>
+          </div>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+      </section>
+
+      <section class="section blog-preview" aria-labelledby="blog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="blogEyebrow">Content strategy</p>
+            <h2 id="blog-title" data-i18n="blogTitle">Education before selling.</h2>
+          </div>
+          <p class="heading-note" data-i18n="blogNote">Blog content can make the brand feel safer, warmer, and more expert.</p>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </section>
+
       <section class="section detail-grid" aria-label="Store details">
         <article>
           <h3 data-i18n="detailOneTitle">信任细节</h3>
@@ -239,6 +300,14 @@
           <p data-i18n="detailThreeBody">后续 Blog 可以写产后洗头护理、草本沐浴文化、手工皂保存方式等主题。
           </p>
         </article>
+      </section>
+
+      <section class="disclaimer" aria-label="Medical disclaimer">
+        <p data-i18n="disclaimerText">
+          These products are based on traditional Chinese herbal principles and are designed to provide
+          gentle, daily support. They are not intended to diagnose, treat, cure, or prevent any disease
+          or medical condition. If you have any health concerns, please consult your doctor or midwife.
+        </p>
       </section>
     </main>
 
